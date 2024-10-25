@@ -1,14 +1,11 @@
 import React, { useContext } from 'react'
-import { contextt } from './context.jsx'
-let data=useContext(contextt)
+import LoginCon from "./context/LoginCon"
+import Joker from "./Joker"
 const App = () => {
-  
   return (
-    <div>
-{data}
-ddddd
-
-    </div>
+    <LoginCon>
+      <Joker />
+    </LoginCon>
   )
 }
 
