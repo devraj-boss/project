@@ -1,12 +1,18 @@
-import React, { useContext } from 'react'
-import LoginCon from "./context/LoginCon"
-import Joker from "./Joker"
-const App = () => {
-  return (
-    <LoginCon>
-      <Joker />
-    </LoginCon>
-  )
-}
+import React, { useEffect, useState } from "react";
 
-export default App
+const App = () => {
+  let [pass, spass] = useState("");
+  useEffect(() => {
+    let str = "ABCDEFGHIJJKLMNOPQRSTUVWXYZ1234567890#%&*#";
+    let mal = "";
+    for (let i = 0; i <= 8; i++) {
+      let n = Math.floor(Math.random() * str.length);
+      mal += str.charAt(n);
+    }
+    spass(mal);
+  }, []);
+
+  return <div>{pass}</div>;
+};
+
+export default App;
