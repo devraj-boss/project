@@ -1,8 +1,10 @@
-
-import React from 'react'
+import React ,{useContext} from 'react'
+import {User} from './content/userContext'
 const Help = () => {
-  return(
-    <div>Help</div>
+  let data=useContext(User)
+  return (
+    <div>{data}</div>
   )
 }
+
 export default Help
